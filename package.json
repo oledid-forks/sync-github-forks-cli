@@ -1,8 +1,8 @@
 {
   "name": "sync-github-forks-cli",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Keeps github forks up to date using node, the github api and git",
-  "main": "dist/application.js",
+  "main": "dist/index.js",
   "bin": {
     "sync-github-forks": "dist/cli.js"
   },
@@ -12,10 +12,7 @@
     "lint": "tslint -c ./tslint.json src/**"
   },
   "files": [
-    "dist",
-    "src",
-    "tsconfig.json",
-    "tslint.json"
+    "dist"
   ],
   "repository": {
     "type": "git",
