@@ -2,3 +2,4 @@ node_modules
 dist
 data
 .vscode/launch.json
+npm-debug.log
