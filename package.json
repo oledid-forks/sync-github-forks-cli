@@ -1,16 +1,16 @@
 {
   "name": "sync-github-forks-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Keeps github forks up to date using node, the github api and git",
   "main": "dist/application.js",
   "bin": {
     "sync-github-forks": "dist/cli.js"
   },
   "scripts": {
-    "postinstall": "tsc -p .",
-    "start": "tsc && node dist/cli.js",
+    "postinstall": "./node_modules/.bin/tsc",
+    "start": "./node_modules/.bin/tsc && node dist/cli.js",
     "test": "npm run lint",
-    "lint": "tslint -c ./tslint.json src/**"
+    "lint": "./node_modules/.bin/tslint -c ./tslint.json src/**"
   },
   "files": [
     "dist",
