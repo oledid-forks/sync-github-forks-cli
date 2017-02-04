@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
-import { Application } from "./application";
-import { CliOptions, Options } from "./options";
-import { Logger } from "./logger";
+import { Application, Options, Logger } from "sync-github-forks";
+import { CliOptions } from "./cliOptions";
 
 const options: Options = new CliOptions();
 const logger = new Logger(options);

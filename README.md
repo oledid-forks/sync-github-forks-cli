@@ -396,5 +396,10 @@ sync-github-forks oledid-forks C:/temp/sync-github-forks (secret-github-api-key)
 ```
 
 
+## Related:
+* [sync-github-forks](https://github.com/oledid/sync-github-forks) - API for this module
+* [@oledid-forks](https://github.com/oledid-forks) - An organization that uses this to sync its forks every day
+
+
 ## License:
 [MIT](LICENSE)
