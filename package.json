@@ -1,6 +1,6 @@
 {
   "name": "sync-github-forks-cli",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "Keep github forks up to date using node, the github api and git",
   "main": "dist/cli.js",
   "bin": {
@@ -42,6 +42,6 @@
   "dependencies": {
     "bluebird": "^3.4.7",
     "execa": "^0.6.0",
-    "sync-github-forks": "^0.1.13"
+    "sync-github-forks": "~0.1.14"
   }
 }
