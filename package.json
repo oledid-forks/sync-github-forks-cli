@@ -1,22 +1,24 @@
 {
   "name": "sync-github-forks-cli",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "Keep github forks up to date using node, the github api and git",
   "main": "dist/cli.js",
   "bin": {
     "sync-github-forks": "dist/cli.js"
   },
   "scripts": {
+    "postinstall": "npm run build",
+    "build": "tsc --newline lf",
     "test": "npm run lint",
-    "lint": "tslint -c ./tslint.json src/**",
-    "build": "tsc --newline lf"
+    "lint": "tslint -t stylish -c ./tslint.json src/**/*.ts && tslint -t stylish -c ./jslint.json dist/**/*.js",
+    "prepublish": "in-publish && npm run build && npm run test || not-in-publish"
   },
   "files": [
     "dist"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oledid/sync-github-forks-cli.git"
+    "url": "git+https://github.com/oledid-js/sync-github-forks-cli.git"
   },
   "keywords": [
     "sync",
@@ -31,18 +33,19 @@
   "author": "Ole Morten Didriksen <code@oledid.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/oledid/sync-github-forks-cli/issues"
+    "url": "https://github.com/oledid-js/sync-github-forks-cli/issues"
   },
-  "homepage": "https://github.com/oledid/sync-github-forks-cli#readme",
+  "homepage": "https://github.com/oledid-js/sync-github-forks-cli#readme",
   "devDependencies": {
     "@types/bluebird": "^3.0.37",
     "@types/node": "^7.0.4",
     "tslint": "^4.4.2",
-    "typescript": "^2.1.5"
+    "typescript": "^2.1.6",
+    "in-publish": "^2.0.0"
   },
   "dependencies": {
     "bluebird": "^3.4.7",
     "execa": "^0.6.0",
-    "sync-github-forks": "~0.1.14"
+    "sync-github-forks": "^0.1.15"
   }
 }
